@@ -17,13 +17,13 @@ jobs:
           distribution: 'temurin'
 
       - name: Set executable permissions for Gradlew
-        run: chmod +x ./Lab-3/gradlew
+        run: chmod +x Lab-3/gradlew
 
       - name: Build with Gradle
-        run: ./Lab-3/gradlew build
+        run: Lab-3/gradlew build
 
       - name: Run tests
-        run: ./Lab-3/gradlew test
+        run: Lab-3/gradlew test
 
   windows-test:
     runs-on: windows-latest
