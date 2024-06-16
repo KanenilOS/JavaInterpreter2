@@ -20,10 +20,12 @@ jobs:
         run: chmod +x ./Lab-3/gradlew
 
       - name: Build with Gradle
-        run: ./Lab-3/gradlew build
+        working-directory: ./Lab-3
+        run: ./gradlew build
 
       - name: Run tests
-        run: ./Lab-3/gradlew test
+        working-directory: ./Lab-3
+        run: ./gradlew test
 
   windows-test:
     runs-on: windows-latest
@@ -37,7 +39,9 @@ jobs:
           distribution: 'temurin'
 
       - name: Build with Gradle
-        run: .\Lab-3\gradlew.bat build
+        working-directory: ./Lab-3
+        run: .\gradlew.bat build
 
       - name: Run tests
-        run: .\Lab-3\gradlew.bat test
+        working-directory: ./Lab-3
+        run: .\gradlew.bat test
